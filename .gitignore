@@ -1,0 +1,26 @@
+# Binary
+mihomo-cli-tui
+mihomo-cli-tui.exe
+
+# Distribution
+dist/
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,65 @@
+apiVersion: extensions.mihomo-cli.io/v1
+kind: Extension
+
+metadata:
+  name: tui
+  version: 1.0.0
+  description: Interactive terminal UI for mihomo-cli
+  author: cjlinux
+  homepage: https://github.com/cjlinux/mihomo-cli-extension-tui
+  repository: https://github.com/cjlinux/mihomo-cli-extension-tui
+
+spec:
+  command:
+    binary: mihomo-cli-tui
+
+  contributes:
+    commands:
+      - name: ui
+        usage: "ui [--api-addr <addr>]"
+        short: "Start interactive TUI panel"
+        description: |
+          Start an interactive terminal user interface for visual proxy management.
+
+          The TUI provides a visual interface for managing proxy nodes, viewing
+          connection status, and monitoring traffic statistics.
+
+          Requires mihomo-cli serve to be running on the default port (8080).
+          Set MIHOMO_CLI_API_ADDR environment variable to use a different endpoint.
+
+          Key bindings:
+            ↑/↓     Navigate
+            Enter   Confirm/Switch node
+            r       Refresh data
+            q/ESC   Exit
+            1-5     Switch tabs (Status/Nodes/Rules/Logs/Stats)
+            Tab     Next tab
+        examples:
+          - "mihomo-cli ui"
+          - "mihomo-cli ui --api-addr http://127.0.0.1:9090"
+
+  hooks:
+    pre-start:
+      script: |
+        #!/bin/sh
+        if ! curl -s http://127.0.0.1:8080/api/v1/status > /dev/null 2>&1; then
+          echo "Error: mihomo-cli serve is not running on http://127.0.0.1:8080"
+          echo "Please start it with: mihomo-cli serve"
+          exit 1
+        fi
+      timeout: 5s
+
+  requirements:
+    mihomo-cli: ">=0.2.0"
+    platforms:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+
+  environment:
+    - name: MIHOMO_CLI_API_ADDR
+      description: "mihomo-cli serve API endpoint (default: http://127.0.0.1:8080)"
+    - name: MIHOMO_CLI_API_KEY
+      description: "API key if serve is configured with --api-key"

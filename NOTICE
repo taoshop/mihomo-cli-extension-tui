@@ -1,0 +1,9 @@
+mihomo-cli-extension-tui
+Copyright 2024-2026 cjlinux
+
+This product includes software developed at:
+- The Go Authors (https://go.dev/)
+- Charm (https://charm.sh/) — Bubble Tea, Lipgloss, Bubbles
+- The Gorilla WebSocket Project (https://github.com/gorilla)
+
+For details, see the NOTICE file in the upstream mihomo-cli repository.
