@@ -5,9 +5,9 @@ metadata:
   name: tui
   version: 1.0.0
   description: Interactive terminal UI for mihomo-cli
-  author: cjlinux
-  homepage: https://github.com/cjlinux/mihomo-cli-extension-tui
-  repository: https://github.com/cjlinux/mihomo-cli-extension-tui
+  author: taoshop
+  homepage: https://github.com/taoshop/mihomo-cli-extension-tui
+  repository: https://github.com/taoshop/mihomo-cli-extension-tui
 
 spec:
   command:

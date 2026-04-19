@@ -1,6 +1,6 @@
 # mihomo-cli-tui
 
-Interactive terminal UI for [mihomo-cli](https://github.com/cjlinux/mihomo-cli) — standalone extension plugin.
+Interactive terminal UI for [mihomo-cli](https://github.com/taoshop/mihomo-cli) — standalone extension plugin.
 
 ## Overview
 
@@ -22,7 +22,7 @@ mihomo-cli ext install tui
 ### Build from source
 
 ```bash
-git clone https://github.com/cjlinux/mihomo-cli-extension-tui.git
+git clone https://github.com/taoshop/mihomo-cli-extension-tui.git
 cd mihomo-cli-extension-tui
 make build
 ```

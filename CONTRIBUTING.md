@@ -15,7 +15,7 @@ Thank you for your interest in contributing!
 ## Development Setup
 
 ```bash
-git clone https://github.com/cjlinux/mihomo-cli-extension-tui.git
+git clone https://github.com/taoshop/mihomo-cli-extension-tui.git
 cd mihomo-cli-extension-tui
 go mod tidy
 make build

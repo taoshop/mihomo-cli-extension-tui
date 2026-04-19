@@ -1,4 +1,4 @@
-module github.com/cjlinux/mihomo-cli-extension-tui
+module github.com/taoshop/mihomo-cli-extension-tui
 
 go 1.21
 
