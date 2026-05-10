@@ -1,0 +1,25 @@
+# acme-release 项目元数据
+# 由项目维护者维护，acme-release init 自动读取
+
+name: mihomo-cli-extension-tui
+module: github.com/taoshop/mihomo-cli-extension-tui
+binary: mihomo-cli-extension-tui
+platforms:
+  - linux/amd64
+  - linux/arm64
+  - windows/amd64
+  - darwin/amd64
+  - darwin/arm64
+ldflags:
+  - -X {{.Module}}/internal/version.Version={{.Version}}
+  - -X {{.Module}}/internal/version.GitCommit={{.GitCommit}}
+  - -X {{.Module}}/internal/version.BuildDate={{.BuildDate}}
+
+reproducible_build: true
+strip_symbols: true
+ignore_commit: false
+ignore_build_date: false
+inject_public_key: false
+signing_required: false
+
+output_dir: dist
