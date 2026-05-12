@@ -1,6 +1,6 @@
 module github.com/taoshop/mihomo-cli-extension-tui
 
-go 1.21
+go 1.23.4
 
 require (
 	github.com/charmbracelet/bubbles v0.18.0
